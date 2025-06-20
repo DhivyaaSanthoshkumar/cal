@@ -1,0 +1,14 @@
+package com.practice.java.com.oops.stat;
+public class ExcHandling {
+    public static void main(String[] args) {
+        int a = 10;
+        try {
+            tryExceptionHandling();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+    public static void tryExceptionHandling() throws ClassNotFoundException {
+        Class.forName("com.nonexistent.ClassName");
+    }
+}
